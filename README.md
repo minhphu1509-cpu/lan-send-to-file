@@ -53,4 +53,4 @@ Không đăng công khai thông tin có thể khai thác hoặc dữ liệu cá 
 
 ## Giấy phép
 
-Dự án chưa chọn giấy phép phân phối. Hãy thêm tệp `LICENSE` sau khi chủ sở hữu quyết định điều khoản sử dụng mã nguồn.
+Mã nguồn được cấp phép theo MIT. Bạn có thể sử dụng, chỉnh sửa, phân phối và dùng thương mại; cần giữ thông báo bản quyền và giấy phép trong các bản sao hoặc phần đáng kể của phần mềm. Xem nội dung đầy đủ trong [LICENSE](LICENSE).
