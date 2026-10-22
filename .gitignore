@@ -1,0 +1,24 @@
+# Build and publish output
+bin/
+obj/
+artifacts/
+publish/
+
+# Visual Studio / IDE state
+.vs/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Test, coverage, and diagnostic output
+TestResults/
+coverage/
+*.log
+*.dmp
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
