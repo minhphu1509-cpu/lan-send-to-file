@@ -1,0 +1,38 @@
+name: Báo lỗi
+description: Báo lỗi hoặc vấn đề khi dùng Gửi File LAN
+title: "[Lỗi] "
+body:
+  - type: input
+    id: app-version
+    attributes:
+      label: Phiên bản ứng dụng
+      placeholder: Ví dụ 1.1.0
+    validations:
+      required: true
+  - type: input
+    id: windows-version
+    attributes:
+      label: Phiên bản Windows
+      placeholder: Ví dụ Windows 11 24H2
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Các bước tái hiện
+      description: Nêu rõ thao tác trên máy gửi và máy nhận.
+    validations:
+      required: true
+  - type: textarea
+    id: expected-actual
+    attributes:
+      label: Kết quả mong đợi và kết quả thực tế
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Quyền riêng tư
+      options:
+        - label: Tôi đã loại bỏ tài liệu cá nhân, mật khẩu và dữ liệu nhạy cảm khỏi nội dung gửi.
+          required: true

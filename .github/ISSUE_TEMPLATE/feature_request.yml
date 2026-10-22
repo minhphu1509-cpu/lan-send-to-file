@@ -1,0 +1,24 @@
+name: Đề xuất tính năng
+description: Đề xuất cải tiến cho Gửi File LAN
+title: "[Đề xuất] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Nhu cầu cần giải quyết
+      description: Mô tả tình huống hiện tại và điều còn bất tiện.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Đề xuất
+      description: Mô tả cách tính năng nên hoạt động.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Giải pháp khác đã cân nhắc
+    validations:
+      required: false

@@ -1,0 +1,40 @@
+name: Windows build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v7
+
+      - name: Set up .NET 10
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Install Inno Setup
+        run: choco install innosetup --yes --no-progress
+
+      - name: Build application packages
+        shell: pwsh
+        run: ./build.ps1 -Configuration Release
+
+      - name: Upload Windows packages
+        uses: actions/upload-artifact@v7
+        with:
+          name: GuiFileLAN-Windows-x64
+          path: |
+            artifacts/GuiFileLAN-Setup-win-x64.exe
+            artifacts/GuiFileLAN-win-x64.zip
+            artifacts/GuiFileLAN-Compact-win-x64.zip
+          if-no-files-found: error
+          compression-level: 0
